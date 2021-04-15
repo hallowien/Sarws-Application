@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SarwsApp2</string>
+    <string name="risk">Risk Uyarıları</string>
+    <string name="harita">Yol Kenarı Üniteleri</string>
+</resources>
