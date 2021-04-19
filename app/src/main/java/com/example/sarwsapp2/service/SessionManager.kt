@@ -1,4 +1,4 @@
-package com.example.sarws
+package com.example.sarwsapp2.service
 
 import android.content.Context
 import android.content.SharedPreferences

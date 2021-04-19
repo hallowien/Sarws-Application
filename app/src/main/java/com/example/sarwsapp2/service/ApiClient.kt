@@ -1,7 +1,7 @@
 package com.example.sarwsapp.service
 
 import android.content.Context
-import com.example.sarwsapp.AuthInterceptor
+import com.example.sarwsapp2.service.AuthInterceptor
 import com.example.sarwsapp2.service.ApiService
 import com.example.sarwsapp2.service.Constants
 import okhttp3.OkHttpClient

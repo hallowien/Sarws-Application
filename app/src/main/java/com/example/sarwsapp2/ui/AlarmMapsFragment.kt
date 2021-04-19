@@ -1,7 +1,5 @@
 package com.example.sarwsapp2.ui
 
-import android.app.Application
-import android.content.Context
 import androidx.fragment.app.Fragment
 
 import android.os.Bundle
@@ -9,20 +7,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.sarws.SessionManager
-import com.example.sarwsapp.CustomInfoWindowForGoogleMap
+import com.example.sarwsapp2.service.SessionManager
 import com.example.sarwsapp.service.ApiClient
 import com.example.sarwsapp2.R
 import com.example.sarwsapp2.request.LoginRequest
 import com.example.sarwsapp2.response.AlarmResponse
-import com.example.sarwsapp2.response.ApiResponse
 import com.example.sarwsapp2.response.LoginResponse
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import retrofit2.Call
@@ -65,20 +60,24 @@ class AlarmMapsFragment : Fragment() {
 
 
     fun getAlarms(){
+
+
         apiClient.getApiService(requireContext()).getAlarm()
             .enqueue(object : Callback<AlarmResponse> {
                 override fun onFailure(call: Call<AlarmResponse>, t: Throwable) {
+
                     Log.e("alarm", "error")
+
                 }
 
                 override fun onResponse(call: Call<AlarmResponse>, response: Response<AlarmResponse>) {
-                    val alarmResponse = response
+                    /*val alarmResponse = response
                     val currentposition = LatLng(38.4607268, 27.0949522)
                     if (alarmResponse != null) {
 
-                        Log.e("id0", alarmResponse.body()!!.data[0].tenanId[0].detailid )
+                        Log.e("id0", alarmResponse.body()!!.data[0].tenantId.id )
 
-                        if(alarmResponse.body()!!.data[0].tenanId[0].detailid == "e2e561d0-e605-11ea-879f-81ec0f3682aa"){
+                        if(alarmResponse.body()!!.data[0].tenantId.id == "e2e561d0-e605-11ea-879f-81ec0f3682aa"){
                             mMap.addMarker(MarkerOptions()
                                 .position(currentposition)
                                 .title("RSMSB1")
@@ -89,6 +88,8 @@ class AlarmMapsFragment : Fragment() {
                     } else {
                         Log.e("device alarm", "error")
                     }
+
+                     */
                 }
             })
     }
@@ -113,6 +114,7 @@ class AlarmMapsFragment : Fragment() {
 
                     if (loginResponse != null) {
                         sessionManager.saveAuthToken(loginResponse.token.toString())
+
                         getAlarms()
                         Log.e("login success", loginResponse!!.token)
                     } else {

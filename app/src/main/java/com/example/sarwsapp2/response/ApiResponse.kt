@@ -1,7 +1,7 @@
 package com.example.sarwsapp2.response
 
 
-import com.example.sarwsapp2.Posts
+import com.example.sarwsapp2.model.Posts
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 

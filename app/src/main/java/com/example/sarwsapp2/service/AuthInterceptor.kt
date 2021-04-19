@@ -1,8 +1,6 @@
-package com.example.sarwsapp
+package com.example.sarwsapp2.service
 
 import android.content.Context
-import android.util.Log
-import com.example.sarws.SessionManager
 import okhttp3.Interceptor
 import okhttp3.Response
 

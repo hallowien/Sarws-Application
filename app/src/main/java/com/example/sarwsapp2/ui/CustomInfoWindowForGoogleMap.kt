@@ -1,4 +1,4 @@
-package com.example.sarwsapp
+package com.example.sarwsapp2.ui
 
 import android.app.Activity
 import android.content.Context
