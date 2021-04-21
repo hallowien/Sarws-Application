@@ -6,32 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/egg"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Display4"
-        app:title="SARWS"
-        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
-        app:titleTextColor="@color/black" />
-
-
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomnav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/teal_200"
-        app:backgroundTint="@color/egg"
-        app:itemBackground="@color/egg"
-        app:itemIconTint="#171717"
-        app:itemTextColor="#1C1C1C"
+        android:background="@color/black"
+        app:backgroundTint="@color/black"
+        app:itemBackground="@color/black"
+        app:itemIconTint="@color/egg"
+        app:itemTextColor="@color/egg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -42,7 +26,6 @@
         android:id="@+id/fragmentTutucu"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomnav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

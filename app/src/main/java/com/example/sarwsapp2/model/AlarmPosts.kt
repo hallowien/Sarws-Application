@@ -10,7 +10,7 @@ class AlarmPosts(
         var id: AlarmDetail,
         @SerializedName("createdTime")
         @Expose
-        var createdTime: Int?,
+        var createdTime: Float?,
         @SerializedName("tenantId")
         @Expose
         var tenantId: AlarmDetail,
@@ -28,19 +28,19 @@ class AlarmPosts(
         var status: String?,
         @SerializedName("startTs")
         @Expose
-        var startTs: Int?,
+        var startTs: Float?,
         @SerializedName("endTs")
         @Expose
-        var endTs: Int?,
+        var endTs: Float?,
         @SerializedName("ackTs")
         @Expose
-        var ackTs: Int?,
+        var ackTs: Float?,
         @SerializedName("clearTs")
         @Expose
-        var clearTs: Int?,
+        var clearTs: Float?,
         @SerializedName("details")
         @Expose
-        var details: String?,
+        var details:  Any,
         @SerializedName("propagate")
         @Expose
         var propagate: Boolean?,
